@@ -2,6 +2,8 @@
 //  SAAKEventType.h
 //  SAAKAppAdsKit
 //
+//  Copyright (c) 2020 Snap Inc. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 

@@ -2,6 +2,8 @@
 //  SAAKAppAdsKit.h
 //  SAAKAppAdsKit
 //
+//  Copyright (c) 2020 Snap Inc. All rights reserved.
+//
 
 #import "SAAKEventMetadata.h"
 #import "SAAKEventMetadataBuilder.h"

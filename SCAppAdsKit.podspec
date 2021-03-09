@@ -1,25 +1,21 @@
 Pod::Spec.new do |s|
     s.name         = "SCAppAdsKit"
-    s.version      = "1.0.0"
+    s.version      = "1.0.1"
     s.summary      = "App Ads Kit by Snap Inc."
     s.description  = <<-DESC
                         App Ads Kit by Snap Inc.
                     DESC
     s.homepage     = "https://kit.snapchat.com"
     s.license = { :type => 'Copyright', :text => <<-LICENSE
-                    Any access or use of the included software, associated documentation, software
-                    code, or other materials made available by Snap Inc. (and its affiliates) is
-                    subject to the Snap Developer Terms:
+                    Any access or use of the included software, associated documentation, software code, or other materials made available by Snap Inc. (and its affiliates) is subject to the Snap Developer Terms found at: 
 
                     https://www.snap.com/terms/developer/
-
-                    and the Snap Audience Network Terms found at:
-
-                    https://www.snap.com/terms/snap-audience-network
-
-                    If you do not wish to be a party to these terms or if you do not agree to all
-                    of these terms, then do not use or otherwise access any such software,
-                    documentation, software code, and other materials.
+                    
+                    and the Snap Business Tools Terms found at:
+                    
+                    https://www.snap.com/terms/snap-business-tools
+                    
+                    Do not use or otherwise access any such software, documentation, software code, or other materials, and uninstall and delete any copies, unless you agree to those terms.
                   LICENSE
                 }
     s.author             = { "Snap Inc." => "ad-kit-support@snap.com" }
