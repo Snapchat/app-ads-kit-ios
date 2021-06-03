@@ -1,0 +1,6 @@
+framework module SCAppAdsKit {
+  umbrella header "SCAppAdsKit.h"
+
+  export *
+  module * { export * }
+}
