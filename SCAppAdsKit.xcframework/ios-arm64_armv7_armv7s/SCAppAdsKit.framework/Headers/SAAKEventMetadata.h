@@ -2,7 +2,7 @@
 //  SAAKEventMetadata.h
 //  SCAppAdsKit
 //
-//  Copyright (c) 2021 Snap Inc. All rights reserved.
+//  Copyright (c) 2022 Snap Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -77,8 +77,12 @@
  * Denotes if limit ad tracking is on.
  */
 @property (nonatomic, readonly) BOOL limitAdTracking;
+/**
+ * Optional IDFA override.
+ */
+@property (nonatomic, readonly, copy) NSUUID *idfa;
 
-- (instancetype)initWithItemCategory:(NSString *)itemCategory itemIds:(NSArray<NSString *> *)itemIds eventId:(NSString *)eventId eventDescription:(NSString *)eventDescription numberOfItems:(NSNumber *)numberOfItems price:(NSDecimalNumber *)price currency:(NSString *)currency paymentInfoAvailable:(NSNumber *)paymentInfoAvailable transactionId:(NSString *)transactionId searchString:(NSString *)searchString signUpMethod:(NSString *)signUpMethod success:(NSNumber *)success level:(NSString *)level isRetargeting:(NSNumber *)isRetargeting email:(NSString *)email phoneNumber:(NSString *)phoneNumber limitAdTracking:(BOOL)limitAdTracking;
+- (instancetype)initWithItemCategory:(NSString *)itemCategory itemIds:(NSArray<NSString *> *)itemIds eventId:(NSString *)eventId eventDescription:(NSString *)eventDescription numberOfItems:(NSNumber *)numberOfItems price:(NSDecimalNumber *)price currency:(NSString *)currency paymentInfoAvailable:(NSNumber *)paymentInfoAvailable transactionId:(NSString *)transactionId searchString:(NSString *)searchString signUpMethod:(NSString *)signUpMethod success:(NSNumber *)success level:(NSString *)level isRetargeting:(NSNumber *)isRetargeting email:(NSString *)email phoneNumber:(NSString *)phoneNumber limitAdTracking:(BOOL)limitAdTracking idfa:(NSUUID *)idfa;
 
 @end
 

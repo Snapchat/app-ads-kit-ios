@@ -2,14 +2,15 @@
 //  SAAKAppAdsKit.h
 //  SCAppAdsKit
 //
-//  Copyright (c) 2021 Snap Inc. All rights reserved.
+//  Copyright (c) 2022 Snap Inc. All rights reserved.
 //
 
 #import "SAAKEventMetadata.h"
 #import "SAAKEventMetadataBuilder.h"
-#import "SAAKEventType.h"
 #import "SAAKInitializationConfiguration.h"
 #import "SAAKInitializationConfigurationBuilder.h"
+
+#import "SAAKEventType.h"
 
 #import <Foundation/Foundation.h>
 
@@ -21,9 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void (^SAAKInitializationCompletionHandler)(BOOL success, NSError *_Nullable error);
 typedef void (^SAAKTrackCompletionHandler)(BOOL success, NSError *_Nullable error);
 
-@interface SAAKAppAdsKit : NSObject
-
-+ (SAAKAppAdsKit *)shared;
+NS_SWIFT_NAME(AppAdsKitProtocol)
+@protocol SAAKAppAdsKitProtocol <NSObject>
 
 @property (nonatomic, assign, readonly, getter=isInitialized) BOOL initialized;
 @property (nonatomic, assign, getter=isAutoLoggingAppEventsEnabled) BOOL enableAutoLoggingAppEvents;
@@ -37,8 +37,15 @@ typedef void (^SAAKTrackCompletionHandler)(BOOL success, NSError *_Nullable erro
           metadata:(nullable SAAKEventMetadata *)metadata
         completion:(nullable SAAKTrackCompletionHandler)completion;
 
+@end
+
+NS_SWIFT_NAME(AppAdsKit)
+@interface SAAKAppAdsKit : NSObject <SAAKAppAdsKitProtocol>
+
++ (SAAKAppAdsKit *)shared;
+
 - (instancetype)init NS_UNAVAILABLE;
-+ (instancetype) new NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 @end
 

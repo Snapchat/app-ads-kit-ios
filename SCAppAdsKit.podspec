@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "SCAppAdsKit"
-    s.version      = "2.1.0"
+    s.version      = "2.2.0"
     s.summary      = "App Ads Kit by Snap Inc."
     s.description  = <<-DESC
                         App Ads Kit by Snap Inc.
@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
     s.vendored_frameworks = "SCAppAdsKit.xcframework"
     s.platform = :ios
     s.ios.deployment_target  = '10.0'
-    s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end

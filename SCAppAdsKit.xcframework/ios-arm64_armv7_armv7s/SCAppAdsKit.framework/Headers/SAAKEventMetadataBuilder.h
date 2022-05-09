@@ -2,7 +2,7 @@
 //  SAAKEventMetadataBuilder.h
 //  SCAppAdsKit
 //
-//  Copyright (c) 2021 Snap Inc. All rights reserved.
+//  Copyright (c) 2022 Snap Inc. All rights reserved.
 //
 #import <Foundation/Foundation.h>
 
@@ -49,6 +49,8 @@
 - (instancetype)withPhoneNumber:(NSString *)phoneNumber;
 
 - (instancetype)withLimitAdTracking:(BOOL)limitAdTracking;
+
+- (instancetype)withIdfa:(NSUUID *)idfa;
 
 @end
 
